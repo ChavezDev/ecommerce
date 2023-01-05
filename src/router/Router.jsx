@@ -3,6 +3,7 @@ import Error404 from "../components/pages/Error404";
 import Home from "../components/pages/Home"
 import Login from "../components/pages/Login";
 import Products from "../components/pages/Products";
+import Register from "../components/pages/Register";
 import App from "../template/App";
 
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />
+  },
+  {
+    path: "/register",
+    element: <Register/>
   }
 ]);
 

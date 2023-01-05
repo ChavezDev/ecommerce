@@ -35,34 +35,34 @@ const Login = () => {
   return (
     <LoginTemplate title="Iniciar Sesion">
       <form onSubmit={handleSubmit}>
-        <div className="text-center mb-4 pb-1">
+        <div className="text-center mb-2 pb-1">
           <input
-            className="w-full text-center p-2 border-solid border-2 border-slate-200"
+            className="w-full text-center p-1 border-solid border-2 border-slate-200"
             type="email"
             name="email"
             placeholder="Correo electronico"
             required
           />
         </div>
-        <div className=" text-center mb-4 pb-1">
+        <div className=" text-center mb-2 pb-1">
           <input
-            className="w-full text-center p-2 border-solid border-2 border-slate-200"
+            className="w-full text-center p-1 border-solid border-2 border-slate-200"
             type="password"
             name="password"
             placeholder="contraseña"
             required
           />
         </div>
-        <div className="text-center mb-12">
-          <button className="bg-gradient w-full p-2 mb-3" type="submit">
+        <div className="text-center mb-9">
+          <button className="bg-gradient w-full p-1 mb-3" type="submit">
             Ingresar
           </button>
-          <Link className="text-gray-500" to="/registro">
+          <Link className="text-gray-500 hover:font-bold hover:text-red-600" to="/register">
             ¿Deseas registrarte?
           </Link>
         </div>
         {error && (
-          <p className="text-center p-2 bg-red-100 text-red-800">
+          <p className="text-center p-2 bg-red-100 hover:font-bold hover:text-red">
             {error?.response?.data?.data}
           </p>
         )}
