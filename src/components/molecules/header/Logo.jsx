@@ -1,12 +1,15 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
 const Logo = () => {
   return (
-    <div>
-      <img
-        src="https://i0.wp.com/sdiinnovations.com/wp-content/uploads/2018/01/ecommerce_logo-03.png?ssl=1"
-        alt="Logo eccomerce"
-      />
+    <div className="flex">
+      <Link to="/">
+        <img
+          className="w-16 m-3"
+          src="https://cdn-icons-png.flaticon.com/512/513/513893.png"
+          alt="Logo eccomerce"
+        />
+      </Link>
     </div>
   );
 };
