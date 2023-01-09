@@ -19,8 +19,6 @@ const Login = () => {
       password: evento.target.password.value, // pasword es el input con ese nombre
     };
 
-    console.log(data);
-
     axios
       .post(`${API_URL}/public/login`, data)
       .then((response) => {
