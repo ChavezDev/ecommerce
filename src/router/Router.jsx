@@ -1,4 +1,5 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter} from "react-router-dom";
+import Form from "../components/pages/admin/product/Form";
 import Error404 from "../components/pages/Error404";
 import Home from "../components/pages/Home"
 import Login from "../components/pages/Login";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
   {
     path: "/register",
     element: <Register/>
+  },
+  {
+    path: "/admin/productos/crear",
+    element: <Form/>
   }
 ]);
 
