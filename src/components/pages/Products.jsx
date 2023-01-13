@@ -1,5 +1,5 @@
 import useFetch from "../../hooks/useFetch";
-import CardProduct from "../molecules/header/CardProduct";
+import CardProduct from "../molecules/CardProduct";
 
 
 const Products = () => {

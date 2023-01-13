@@ -1,5 +1,4 @@
 const CardProduct = ({ product }) => {
-  console.log(product);
   return (
     <div className="min-h-[10rem] w-72 overflow-hidden rounded-md bg-white text-gray-700 shadow-lg">
       <div className="lg:aspect-none min-h-40 aspect-auto w-full overflow-hidden rounded-md bg-gray-200 lg:h-40">
