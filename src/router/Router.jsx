@@ -1,5 +1,6 @@
 import { createBrowserRouter} from "react-router-dom";
 import Form from "../components/pages/admin/product/Form";
+import Table from "../components/pages/admin/product/Table";
 import Error404 from "../components/pages/Error404";
 import Home from "../components/pages/Home"
 import Login from "../components/pages/Login";
@@ -33,9 +34,13 @@ const router = createBrowserRouter([
     element: <Register/>
   },
   {
+    path: "/admin/productos",
+    element: <Table />,
+  },
+  {
     path: "/admin/productos/crear",
     element: <Form/>
-  }
+  },
 ]);
 
 export default router;

@@ -34,7 +34,7 @@ const Form = () => {
   };
 
   return (
-    <section className="flex h-screen w-full items-center justify-center bg-orange-300 py-40 opacity-70">
+    <section className="flex h-screen w-full items-center justify-center bg-gradient py-40 opacity-70">
   <div className="w-3/6 rounded-md bg-white op p-4">
     <div className="h-1/10 w-full">
       <h1 className="h-full w-full p-2 text-center text-sm font-semibold md:text-xl">Crear Producto</h1>
@@ -79,7 +79,7 @@ const Form = () => {
           <textarea className="w-full rounded-md p-1 bg-blue-200" name="description" id="DescripcionProduct" rows="3"></textarea>
         </div>
         <div className="w-full m-1 flex items-center justify-center">
-            <button type="submit" className="rounded-md w-1/3 m-1 bg-blue-700 text-white p-1 hover:bg-green-600 text-sm">Agregar</button>
+            <button type="submit" className="rounded-md w-1/3 m-1 bg-blue-700 text-white p-1 hover:bg-green-600 text-sm">Crear Producto</button>
         </div>
       </form>
       </div>

@@ -10,3 +10,14 @@
   @apply py-5 px-4 hover:text-sky-100;
 }
 
+.spin {
+  animation: EDrotation infinite 2s ease-out;
+}
+
+@keyframes EDrotation {
+  to{
+    transform: rotate(2turn);
+  }
+}
+
+

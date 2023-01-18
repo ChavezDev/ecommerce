@@ -1,8 +1,16 @@
+import { Link } from "react-router-dom";
+import { formatPrice } from "../../helpers/number";
+
 const CardProduct = ({ product }) => {
   return (
     <div className="min-h-[10rem] w-72 overflow-hidden rounded-md bg-white text-gray-700 shadow-lg">
       <div className="lg:aspect-none min-h-40 aspect-auto w-full overflow-hidden rounded-md bg-gray-200 lg:h-40">
-        <img className="h-full w-full object-cover object-center lg:h-40 lg:w-full" src={product.images[0]} />
+        <Link to={`/productos/${product.id}`}>
+          <img
+            className="h-full w-full object-cover object-center lg:h-40 lg:w-full"
+            src={product.images[0]}
+          />
+        </Link>
       </div>
       <div className="p-5 flex flex-col gap-3">
         <div className="flex items-center gap-2">
@@ -14,15 +22,17 @@ const CardProduct = ({ product }) => {
           </span>
         </div>
         <div>
-          <h2 className="font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
-            {product.product_name}
-          </h2>
+          <Link to={`/productos/${product.id}`}>
+            <h2 className="font-semibold text-2xl overflow-ellipsis overflow-hidden whitespace-nowrap">
+              {product.product_name}
+            </h2>
+          </Link>
         </div>
         <div>
-          <span className="text-xl font-bold">$ {product.price}</span>
+          <span className="text-xl font-bold">{formatPrice(product.price)}</span>
           <div className="flex items-center gap-2 mt-1">
             <span className="text-sm line-through opacity-50">
-              $ {(product.price * 10) / 8}
+              {formatPrice((product.price * 10) / 8)}
             </span>
             <span className="bg-green-400 px-1.5 py-0.5 rounded-md text-xs text-white">
               save 20%

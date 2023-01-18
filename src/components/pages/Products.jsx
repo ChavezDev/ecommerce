@@ -1,11 +1,12 @@
 import useFetch from "../../hooks/useFetch";
+import Loader from "../atoms/Loader";
 import CardProduct from "../molecules/CardProduct";
 
 
 const Products = () => {
   const { data, error, loading } = useFetch("public/products");
 
-  if (loading) return <h1>Cargando...!</h1>;
+  if (loading) return <Loader/>;
   if (error) return <h1>Error en la peticion</h1>;
 
   return (
