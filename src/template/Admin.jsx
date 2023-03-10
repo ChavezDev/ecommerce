@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-import MainMenu from "../components/molecules/header/MainMenu";
+import AdminMenu from "../components/molecules/header/AdminMenu";
 import MainHeader from "../components/organisms/MainHeader";
 
-const App = () => {
+const Admin = () => {
   return (
     <div>
       <MainHeader>
-        <MainMenu/>
+        <AdminMenu/>
       </MainHeader>
       <div className="pt-28 max-w-200 m-auto">
         <Outlet />
@@ -15,4 +15,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Admin;

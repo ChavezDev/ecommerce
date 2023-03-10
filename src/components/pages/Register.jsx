@@ -4,6 +4,8 @@ import { Link, useNavigate} from "react-router-dom";
 import { API_URL } from "../../constants/env";
 import LoginTemplate from "../../template/LoginTemplate";
 
+
+
 const Register = () => {
   const nav = useNavigate();
 

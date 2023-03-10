@@ -1,13 +1,15 @@
 import axios from "axios";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
 import { API_URL } from "../../constants/env";
+import { UserContext } from "../../context/UserContext";
 import { setToken } from "../../helpers/auth";
 import LoginTemplate from "../../template/LoginTemplate";
 
 const Login = () => {
   const nav = useNavigate();
+  const {setUserData} = useContext(UserContext)
 
   const [error, setError] = useState();
 
@@ -23,6 +25,7 @@ const Login = () => {
       .post(`${API_URL}/public/login`, data)
       .then((response) => {
         setToken(response.data.data.token);
+        setUserData(response.data.data.user)
         nav("/");
       })
       .catch((err) => {

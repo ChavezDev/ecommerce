@@ -5,7 +5,7 @@ const CardProduct = ({ product }) => {
   return (
     <div className="min-h-[10rem] w-72 overflow-hidden rounded-md bg-white text-gray-700 shadow-lg">
       <div className="lg:aspect-none min-h-40 aspect-auto w-full overflow-hidden rounded-md bg-gray-200 lg:h-40">
-        <Link to={`/productos/${product.id}`}>
+        <Link to={`/products/${product.id}`}>
           <img
             className="h-full w-full object-cover object-center lg:h-40 lg:w-full"
             src={product.images[0]}
